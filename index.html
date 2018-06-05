@@ -1,0 +1,40 @@
+    <html>
+    <head>
+        <script src="pairingJavaScript.js"></script>
+        <link rel="stylesheet" type="text/css" href="pairingCSS.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body onload="initialize()">
+        <h1 class="title" align="center">Pairing Central</h1>
+        <div class="flexContainerControls">
+            <div class="resetButton">
+                <button id="resetButton" onclick="resetPairs()">Reset Pairs</button>
+            </div>
+            <div class="randomizePairsButton">
+                <button id="randomPairs" onclick="randomizePairs()">Randomize Pairs</button>
+            </div>
+            <div class="addNewPair">
+                <button id="addNewPair" onclick="addNewPairObject()">Add Member</button>
+            </div>
+            <div class="addNewBox">
+                <button id="addNewBox" onclick="addNewGroupObject()">Add Group</button>
+            </div>
+            <div class="toggleDrag">
+                <input id="testToggle" type="checkbox"/> <label>Turn Off Drag &amp; Drop</label>
+            </div>
+            <div class="flexDeleteBox">
+                <div class="garbageCanIcon" id="trash" ondrop="deleteName(event)" ondragover="allowDrop(event)"> &#xe020; </div>  
+            </div>        
+        </div>
+    <hr/>
+        <div class='flexContainerPairs' id="pairContainer">
+            <div class="pairNames" id="divPairs" ondrop="drop(event)" ondragover="allowDrop(event)">            
+            </div>
+        </div>
+    <hr />
+            <div class='flexContainerBoxes' id="groupContainer">
+            </div>
+        </body>
+    </html>
